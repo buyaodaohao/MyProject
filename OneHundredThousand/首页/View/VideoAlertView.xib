@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="VideoAlertView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ki-dI-sAt">
+                    <rect key="frame" x="30" y="175" width="315" height="200"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="温馨提示" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFH-nb-bRz">
+                            <rect key="frame" x="30" y="20" width="280" height="25.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="卡顿，播放不了，不清晰，试试右上角切换线路（自备八条线路）！！！" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJb-9e-idH">
+                            <rect key="frame" x="30" y="55.5" width="255" height="90"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="90" id="LUQ-Fo-f8f"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.31372549019607843" green="0.31372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSo-FX-owc">
+                            <rect key="frame" x="219" y="155.5" width="66" height="40.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="66" id="xhu-hy-UXJ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="知道了"/>
+                            <connections>
+                                <action selector="kowBtClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="1kU-WT-XHM"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="sJb-9e-idH" firstAttribute="leading" secondItem="uFH-nb-bRz" secondAttribute="leading" id="Hvn-ao-hts"/>
+                        <constraint firstItem="bSo-FX-owc" firstAttribute="top" secondItem="sJb-9e-idH" secondAttribute="bottom" constant="10" id="Oqg-CM-3jV"/>
+                        <constraint firstAttribute="trailing" secondItem="sJb-9e-idH" secondAttribute="trailing" constant="30" id="P3R-DH-afR"/>
+                        <constraint firstAttribute="height" constant="200" id="Vdy-jj-xiL"/>
+                        <constraint firstItem="sJb-9e-idH" firstAttribute="top" secondItem="uFH-nb-bRz" secondAttribute="bottom" constant="10" id="WDj-Vm-1mz"/>
+                        <constraint firstAttribute="bottom" secondItem="bSo-FX-owc" secondAttribute="bottom" constant="4" id="dRX-iF-iI5"/>
+                        <constraint firstItem="uFH-nb-bRz" firstAttribute="leading" secondItem="1Ki-dI-sAt" secondAttribute="leading" constant="30" id="fmB-Vm-px1"/>
+                        <constraint firstItem="uFH-nb-bRz" firstAttribute="top" secondItem="1Ki-dI-sAt" secondAttribute="top" constant="20" id="j9e-jI-TtH"/>
+                        <constraint firstAttribute="trailing" secondItem="uFH-nb-bRz" secondAttribute="trailing" constant="5" id="p2f-nH-TK1"/>
+                        <constraint firstAttribute="trailing" secondItem="bSo-FX-owc" secondAttribute="trailing" constant="30" id="suu-UF-9bB"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="1Ki-dI-sAt" secondAttribute="trailing" constant="30" id="HmN-AL-cIK"/>
+                <constraint firstItem="1Ki-dI-sAt" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" multiplier="0.8" id="NKJ-8i-EpM"/>
+                <constraint firstItem="1Ki-dI-sAt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="hQ5-4t-9lV"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="contentLabel" destination="sJb-9e-idH" id="LMy-lO-dv9"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

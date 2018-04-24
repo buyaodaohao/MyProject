@@ -1,0 +1,24 @@
+PODS:
+  - BmobSDK (2.2.1):
+    - WechatOpenSDK (~> 1.7.7)
+  - WechatOpenSDK (1.7.9)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - BmobSDK
+  - YYModel (~> 1.0.4)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - BmobSDK
+    - WechatOpenSDK
+    - YYModel
+
+SPEC CHECKSUMS:
+  BmobSDK: 952f0ca736deae9d1b6591d72337df7d9072d4f2
+  WechatOpenSDK: 1fe7e3b07db860d6a936c3ff4a5aba6b890958d9
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: 24c5ffd547cd6af97a3feddc2c99dde4aa634840
+
+COCOAPODS: 1.5.0

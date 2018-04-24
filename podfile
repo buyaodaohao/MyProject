@@ -1,0 +1,10 @@
+platform :ios, '8.0'
+
+target "OneHundredThousand" do
+
+
+pod 'YYModel', '~> 1.0.4'
+
+pod 'BmobSDK'
+
+end

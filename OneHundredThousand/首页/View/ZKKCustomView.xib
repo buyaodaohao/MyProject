@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZKKCustomView">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HdU-Pz-4rz">
+                    <rect key="frame" x="5" y="15" width="140" height="170"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9b7-qQ-RrB">
+                            <rect key="frame" x="70" y="43" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k9f-aH-cJB">
+                            <rect key="frame" x="5" y="48" width="130" height="117"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vda-yg-xsC">
+                            <rect key="frame" x="0.0" y="0.0" width="140" height="170"/>
+                            <connections>
+                                <action selector="btClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="tBq-aK-d2l"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="vda-yg-xsC" firstAttribute="top" secondItem="HdU-Pz-4rz" secondAttribute="top" id="41n-if-i2x"/>
+                        <constraint firstAttribute="trailing" secondItem="vda-yg-xsC" secondAttribute="trailing" id="8h1-wF-YRW"/>
+                        <constraint firstAttribute="trailing" secondItem="k9f-aH-cJB" secondAttribute="trailing" constant="5" id="Hno-sO-rUp"/>
+                        <constraint firstAttribute="bottom" secondItem="k9f-aH-cJB" secondAttribute="bottom" constant="5" id="TVm-ij-bKS"/>
+                        <constraint firstItem="k9f-aH-cJB" firstAttribute="top" secondItem="9b7-qQ-RrB" secondAttribute="bottom" constant="5" id="Z2J-yx-IKj"/>
+                        <constraint firstItem="9b7-qQ-RrB" firstAttribute="centerY" secondItem="HdU-Pz-4rz" secondAttribute="centerY" multiplier="0.5" id="gIz-ul-oj3"/>
+                        <constraint firstItem="vda-yg-xsC" firstAttribute="leading" secondItem="HdU-Pz-4rz" secondAttribute="leading" id="n0b-C9-Vdj"/>
+                        <constraint firstItem="k9f-aH-cJB" firstAttribute="leading" secondItem="HdU-Pz-4rz" secondAttribute="leading" constant="5" id="qkm-LF-1t7"/>
+                        <constraint firstAttribute="bottom" secondItem="vda-yg-xsC" secondAttribute="bottom" id="x7D-Pg-N3q"/>
+                        <constraint firstItem="9b7-qQ-RrB" firstAttribute="centerX" secondItem="HdU-Pz-4rz" secondAttribute="centerX" id="x7c-Yl-cUg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="HdU-Pz-4rz" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="IPr-m4-hp2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HdU-Pz-4rz" secondAttribute="bottom" constant="15" id="Y4e-WH-VOE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HdU-Pz-4rz" secondAttribute="trailing" constant="5" id="ZRV-XO-gud"/>
+                <constraint firstItem="HdU-Pz-4rz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="psY-3m-D6q"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bgView" destination="HdU-Pz-4rz" id="Kma-F6-V9Z"/>
+                <outlet property="imageV" destination="k9f-aH-cJB" id="LTv-eO-MEr"/>
+                <outlet property="taiBt" destination="vda-yg-xsC" id="e7e-gp-eK9"/>
+                <outlet property="titleLabel" destination="9b7-qQ-RrB" id="b5g-ZU-UPA"/>
+            </connections>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,112 @@
+//
+//  OneHundredThousand.pch
+//  OneHundredThousand
+//
+//  Created by FaTuZhiNengZhuKK on 2017/8/3.
+//  Copyright © 2017年 ZhuKK. All rights reserved.
+//
+
+#ifndef OneHundredThousand_pch
+#define OneHundredThousand_pch
+
+#import "UIView+Toast.h"
+#import "NSArray+OutIndex.h"
+#import "BaseViewController.h"
+#import "UIView+Frame.h"
+#import "Common.h"
+#import "ServiceTool.h"
+//#import <UIKit+AFNetworking.h>
+#import "UIKit+AFNetworking.h"
+
+    ///适配iPhone x
+#define SafeAreaTopHeight ([[UIScreen mainScreen] bounds].size.height == 812.0 ? 88 : 64)
+    /// 底部宏iPhone x
+#define SafeAreaBottomHeight ([[UIScreen mainScreen] bounds].size.height == 812.0 ? 34 : 0)
+
+    ///适配iPhone x
+#define SCREEN_Y ([[UIScreen mainScreen] bounds].size.height == 812.0 ? 44 : 20)
+//#import <YYModel.h>
+
+/*
+ 
+ WX_Uid
+ WX_Header_Url
+ WX_Name
+ 
+ * uid : 11  微信UID
+ * vipLeft : 0 VIP剩余天数
+ * pointsLeft : 0   积分剩余
+ * commendLeft : 0  迈思币剩余
+ * commendNo : null 推荐码（个人信息页）
+ * ifFirst : 1  （是否为首充用户）
+ * giveAmount: 50.0 （获得的系统赠送迈思币数量）
+ * double commend2cash; 当前迈思币兑换的RMB数量
+ 
+ 
+ */
+
+
+#define APP_Width [UIScreen mainScreen].bounds.size.width
+#define APP_Height [UIScreen mainScreen].bounds.size.height
+
+#define WIDTH  APP_Width/375
+#define HEIGHT  APP_Height/667
+
+#define Status_Height (APP_Height>740 ? 44:20)
+#define Bottom_Height (APP_Height>740 ? 34:0)
+
+
+#define Custom_Weak(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+//存储对象
+#define User_Default_SetObjectForKey(__VALUE__,__KEY__) \
+{\
+[[NSUserDefaults standardUserDefaults] setObject:__VALUE__ forKey:__KEY__];\
+[[NSUserDefaults standardUserDefaults] synchronize];\
+}
+
+//获得存储的对象
+#define User_Default_ObjectForKey(__KEY__)  [[NSUserDefaults standardUserDefaults] objectForKey:__KEY__]
+
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+/**字体配置*/
+#define FONT_SIZE_12 [UIFont systemFontOfSize:12]
+#define FONT_SIZE_13 [UIFont systemFontOfSize:13]
+#define FONT_SIZE_14 [UIFont systemFontOfSize:14]
+#define FONT_SIZE_15 [UIFont systemFontOfSize:15]
+#define FONT_SIZE_16 [UIFont systemFontOfSize:16]
+#define FONT_SIZE_17 [UIFont systemFontOfSize:17]
+#define FONT_SIZE_18 [UIFont systemFontOfSize:18]
+#define FONT_SIZE_19 [UIFont systemFontOfSize:19]
+#define FONT_SIZE_20 [UIFont systemFontOfSize:20]
+#define FONT_SIZE_21 [UIFont systemFontOfSize:21]
+#define FONT_SIZE_22 [UIFont systemFontOfSize:22]
+/**字体配置*/
+//带有RGBA的颜色设置
+#define RGB_Alpha(R, G, B, A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+
+#define Base_Color      RGB_Alpha(45, 130,210, 1) //项目主颜色 4EB69B
+#define Line_COLOR      RGB_Alpha(215, 215, 215, 1) //线的背景颜色
+#define Gray_Text_COLOR      RGB_Alpha(154, 154, 154, 1) //灰色字体的9A9A9A颜色
+#define Block_Text_COLOR      RGB_Alpha(0, 0, 0, 1) //黑色字体的颜色
+#define Gray_View_COLOR      RGB_Alpha(240, 239,244, 1) //空白背景的颜色
+#define Red_Text_COLOR       RGB_Alpha(217, 20, 39, 1)//红色字体颜色D91427
+
+
+//获得主 window
+#define Window [[UIApplication sharedApplication].delegate window]
+
+//展示提示View
+#define Show_Toast(str,Time)  CSToastStyle *style = [[CSToastStyle alloc] initWithDefaultStyle]; \
+[Window  makeToast:str duration:Time position:CSToastPositionCenter style:style];\
+Window.userInteractionEnabled = NO; \
+dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(Time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{\
+Window.userInteractionEnabled = YES;\
+});\
+
+//获取沙盒Document路径
+#define kDocumentPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
+
+#endif /* OneHundredThousand_pch */
